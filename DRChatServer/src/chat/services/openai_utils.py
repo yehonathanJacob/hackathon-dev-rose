@@ -19,7 +19,7 @@ class OpenAIService:
         self.confluence = confluence = Confluence(
             url='https://datarailsteam.atlassian.net/wiki',
             username='sergey@datarails.com',
-            password=os.environ['CONFLUENCE_API_TOKEN']
+            password='ATATT3xFfGF0acnZay-8uu0r6kUpAa7He8uFctDbfKGNwTUQolLKdwa2fs70RRFF-KoEZzNt-NgUGeF_bO7b2YaiNM6H1R4fU03xV_oCXnchW9VyMllfCvl3YlFOIcZe7fyg4iNvzRH7ygXfTslbbgB_IC1oXgzQjvGRxnq0kx_wreMV3lrZXGY=61A43A62'
         )
 
     def _create_thread(self) -> str:
