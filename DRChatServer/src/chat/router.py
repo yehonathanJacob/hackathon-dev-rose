@@ -19,10 +19,6 @@ def get_chat_response(payload: MessageRequest):
 def get_chat_history(thread_id: str = Query(...)):
     return {"messages": openai_service.get_thread_messages(thread_id=thread_id)}
 
-@router.get("/get_chat_history")
-def get_chat_history(thread_id: str = Query(...)):
-    return openai_service.get_thread_messages(thread_id)
-
 @router.post("/get_completion_with_confluence")
 def get_completion_with_confluence(request: QueryRequest):
     try:
