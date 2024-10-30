@@ -51,3 +51,12 @@ class OpenAIService:
             raise HTTPException(
                 status_code=500, detail=f"Error communicating with OpenAI: {str(e)}"
             ) from e
+            
+    def get_thread_messages(self, thread_id: str):
+        try:
+            messages = self.client.beta.threads.messages.list(thread_id=thread_id)
+            return [message.content[0].text.value for message in messages.data]
+        except Exception as e:
+            raise HTTPException(
+                status_code=500, detail=f"Error retrieving chat history: {str(e)}"
+            ) from e
