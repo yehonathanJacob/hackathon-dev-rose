@@ -7,3 +7,4 @@ class OpenAIClientRole(Enum):
 
 class OpenAIClientThreadStatus(Enum):
     COMPLETED = 'completed'
+    REQUIRES_ACTION = 'requires_action'
